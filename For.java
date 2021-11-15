@@ -3,52 +3,57 @@ package com.company;
 import java.util.Scanner;
 
 public class For {
-                                                        /// 10 numbers  -- >  sum = 10- Values (1+2+3+4+5+6+7+8+9+10)
+
     public static void main(String[] args) {
-        /*Scanner s = new Scanner(System.in);
-        //       index: 0   1   2
-        int array [] = {4, 8, 10};
-
-        System.out.println(array[0]); // 0 --> 4
-        System.out.println(array[1]); // 1 --> 8
-        System.out.println(array[2]);  //2 --> 10
-
-        //System.out.println(String.format("%d  %d %d "), array[0] , array[1] , array[2]);
-                         //  0        1       2
-         String cars [] = {"Honda", "Volvo", "Mazda" };   // 0 - 2
-         System.out.println(cars[0] + ", " + cars[1] + ", " + cars[2]);
-
-        System.out.println("=================");
-         // begin; condition - end; jumps
-         for(int i = 0; i < 3; i++){
-             System.out.println(cars[i]);
-         }
-
-        System.out.println("=================");
-         int arr[] = {1, 2, 3 ,4, 5, 6};
-       // System.out.println(arr.length);
-        for(int i =0;  i < arr.length; i++ ){
-            System.out.println(arr[i]);
-        }*/
-        //             0  1 2  3 4
-       /* int array [] = {1,2,3,4,5};
-        for(int i = 0; i < array.length; i++){
-            System.out.println("in index: " +  i  + ", value: " + array[i]);
-        }*/
-        //                         0       1       2        3
-        /*String colorsArray [] = {"black", "blue", "red", "green" };
-        for(int index = 0; index <= colorsArray.length; index++){  //index = 4  = 4
-            System.out.println(colorsArray[index]);  // colorArray[4]
-        }*/
-
-        int my_array [] = {0,5,0,8,4,2,1,9};
-        int shum = 0;
-
-        for(int index = 0; index < my_array.length; index++ ){
-            shum = shum + my_array[index];
-            System.out.println("shum now is: " + shum);
+        // begin ; condition ; jumps
+        // 1:
+        for(int i = 20; i <= 2000; i+=5){
+            System.out.println(i);
         }
-        System.out.println( shum);
+
+        //2:
+        int sum = 0;
+        // begin ; condition ; jumps
+        for(int i =1; i <= 20; i++) {
+            sum = sum + i;
+        }
+        System.out.println("Sum= " + sum);
+
+        //3:
+        // 5         >= -10    ++
+        // begin ; condition ; jumps
+        //  5, 4, 3, 2, 1 .... -10  ///  5 6 7 8 9
+        for(int i = 5; i >= -10; i--){
+            System.out.println(i);
+        }
+        //4:  begin 100; end  > 0; --      -> i % 7 = 0
+        for(int i = 100; i > 0; i-- ){
+            if(i % 7 == 0) {
+                System.out.print(i);
+                System.out.print(", ");
+            }
+        }
+        //5: begin - 1; end < 100; i++
+        for(int i= 1; i <= 100; i++){
+            if(i % 2 == 0){
+                System.out.print(i + ", ");
+            }
+        }
+        //6: begin - 1; end < 100; i++
+        for(int i= 1; i <= 100; i++){
+            if(i % 2 != 0){
+                System.out.print(i + ", ");
+            }
+        }
+        Scanner s = new Scanner(System.in);
+        int sum1 = 0; // = 100
+        //7:
+        while(sum1 < 100){
+            System.out.println("Enter number? ");
+            //sum = sum + s.nextInt();
+            sum1 += s.nextInt();
+        }
+        System.out.println("Done " + sum1);
 
     }
 }
